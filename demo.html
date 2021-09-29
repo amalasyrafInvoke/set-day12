@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/demo.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form>
+        <div id="item-a" class="item-list">
+          <input id="amountInput1" type="number" placeholder="Amount" />
+          <input id="qtyInput1" type="number" placeholder="Quantity" />
+          <input disabled id="subtotal1" type="number" placeholder="Subtotal" />
+        </div>
+        <div id="item-b" class="item-list">
+          <input id="amountInput2" type="number" placeholder="Amount" />
+          <input id="qtyInput2" type="number" placeholder="Quantity" />
+          <input disabled id="subtotal2" type="number" placeholder="Subtotal" />
+        </div>
+        <div id="item-c" class="item-list">
+          <input id="amountInput3" type="number" placeholder="Amount" />
+          <input id="qtyInput3" type="number" placeholder="Quantity" />
+          <input disabled id="subtotal3" type="number" placeholder="Subtotal" />
+        </div>
+        <div id="item-d" class="item-list">
+          <input id="amountInput4" type="number" placeholder="Amount" />
+          <input id="qtyInput4" type="number" placeholder="Quantity" />
+          <input disabled id="subtotal4" type="number" placeholder="Subtotal" />
+        </div>
+        <div id="total">
+          <h4>Total:</h4>
+          <h4>Test</h4>
+        </div>
+        <button onclick="doTotalCalc()">Calculate</button>
+      </form>
+    </div>
+    <script src="js/demo.js"></script>
+  </body>
+</html>

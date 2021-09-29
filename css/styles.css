@@ -1,0 +1,267 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+#app-holder {
+  width: 200%;
+  display: flex;
+  flex-direction: row;
+  transition: 0.75s all;
+  
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% ;
+  height: 65px;
+  z-index: 5;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+  background-color: black;
+  color: white;
+  transition: all 0.75s;
+}
+
+/* nav ul li::after {
+  content: '';
+
+} */
+
+nav ul li {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li:hover .line {
+  display: block;
+  width: 100%;
+  animation-name: hoverNav;
+  animation-duration: 1s;
+}
+
+@keyframes hoverNav {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.line {
+  background-color: white;
+  height: 3px;
+  width: 0;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+.active {
+  width: 100%;
+}
+
+#todolist-app {
+  background-color: #316B83; 
+  height: auto;
+  margin-top: 3rem;
+  padding: 1.25rem;
+  width: 100%;
+}
+
+#invoice-app {
+  width: 100%;
+  height: 100vh;
+}
+
+#todolist-app h1 {
+  color: #6D8299;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#input-holder {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#input-holder > * {
+  margin: 0.5rem;
+}
+
+#input-holder input {
+  height: 40px;
+  width: 50%;
+  min-width: 250px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 28px;
+}
+
+#input-holder button {
+  padding: 5px;
+  width: 100px;
+}
+
+#list-holder {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  height: 600px;
+  margin: 20px;
+}
+
+#list-holder > * {
+  background-color: #8CA1A5;
+  color: #6D8299;
+  border-radius: 25px;
+  width: 50%;
+  height: 100%;
+  margin: 0 20px;
+  padding: 10px 0px;
+  text-align: center
+}
+
+#uncompleted-task, #completed-task {
+  overflow-y: auto;
+}
+
+#uncompleted-task h1 span, #completed-task h1 span {
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+#uncompleted-list, #completed-list {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-between;
+}
+
+#uncompleted-list > *, #completed-list > * {
+  min-height: 80px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.task-list h1 {
+  flex-grow: 0.7;
+  padding: 5px 15px;
+  width: 50%;
+  text-align: left;
+}
+
+.fa-square, .fa-trash, .fa-check {
+  font-size: 1.5rem;
+  margin: 0 8px;
+  background-color: #8CA1A5;
+  color: #6D8299;
+  transition: 0.75s all;
+}
+.fa-square:hover, .fa-trash:hover, .fa-check:hover {
+  color: white;
+  font-size: 1.8rem;
+}
+
+button {
+  border: none;
+}
+
+.moveAni {
+  animation-name: moveAni;
+  animation-duration: 0.5s;
+}
+
+@keyframes moveAni {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(200px);
+    opacity: 0.2;
+  }
+}
+
+.moveAniLeft {
+  animation-name: moveAniLeft;
+  animation-duration: 0.5s;
+}
+
+@keyframes moveAniLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-200px);
+    opacity: 0.2;
+  }
+}
+
+/* for invoice app */
+
+form {
+  text-align: center;
+  margin: 1.2rem 0;
+}
+
+#invoice-app {
+  width: 100%;
+  height: 100%;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-list {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.item-list > * {
+  margin: 0 15px;
+}
+
+#total {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
